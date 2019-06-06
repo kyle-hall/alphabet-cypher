@@ -1,0 +1,19 @@
+{
+  "name": "alphabet-cypher",
+  "version": "1.0.0",
+  "main": "alphabetCypher.js",
+  "author": "Kyle Hall",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watchAll",
+    "run-node": "./node_modules/@babel/node/bin/babel-node.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "jest": "^24.8.0"
+  }
+}
