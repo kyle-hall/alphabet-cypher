@@ -1,16 +1,14 @@
 const generateRepeatedKey = (key, msg) => {
   if (key.length == msg.length) return key
 
-  let repeatedKey = ''
-  let keyCursor = 0
+  const loop = (result, currentKey, theMessage) => {
+    if (theMessage.length == 0) return result
 
-  for (let i = 0; i < msg.length; i++) {
-    repeatedKey = repeatedKey + key[keyCursor]
-    keyCursor++
-    if (keyCursor >= key.length) keyCursor = 0
+    if (currentKey.length == 0) currentKey = key
+    return loop(result + currentKey[0], currentKey.slice(1), theMessage.slice(1))
   }
 
-  return repeatedKey
+  return loop('', key, msg)
 }
 
 const keyRepeater = {
